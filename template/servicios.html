@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+</head>
+<body>
+
+  <button><a href="/formularioServicio/">Crear</a> </button>
+
+    <table>
+        <tr>
+          <th>Nombre servicio</th>
+          <th>Insumos</th>
+          <th>Tiempo</th>
+          <th>Precio</th>
+          <th>Estado</th>
+          <th>Funciones</th>
+        </tr>
+        
+          {% for listar in servicio %}
+          <tr>
+            <td>{{listar.nServicio}}</td>
+            <td>Por incluir</td>
+            <td>{{listar.tiempo}}</td>
+            <td>{{listar.precio}}</td>
+            <td>Por incluir</td>>
+            <td><button><a href="{% url 'editarServicio' listar.idServicio %}">Editar</a> </button></td>
+            <td><button><a href="{% url 'eliminarServicio' listar.idServicio %}">Eliminar</a> </button></td>
+            <td><button><a href="#">Ver detalle</a> </button></td>
+          </tr>
+          {% endfor %}
+          
+        </tr>
+      </table>
+      
+</body>
+</html>

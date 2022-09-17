@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de servicios</title>
+</head>
+<body>
+    <form action="{% url 'actualizarServicio' mostrar.idServicio %}" method="GET">
+      
+        <label for="">Nombre</label>
+        <input type="text" name="nombre" value="{{mostrar.nServicio}}">
+        
+        <label for="">Insumos</label> 
+        <input type="text" name="insumos" value="#">
+
+        <label for="">Tiempo</label>
+        <input type="text" name="tiempo" value="{{mostrar.tiempo}}">
+        
+        <label for="">Precio</label>
+        <input type="text" name="precio" value="{{mostrar.precio}}">
+
+       
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
